@@ -1,4 +1,5 @@
 *.swp
 *.swo
+*.pyc
 .DS_STORE
 __py_cache__

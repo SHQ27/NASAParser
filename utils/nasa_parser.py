@@ -2,6 +2,7 @@
 
 import os
 import time
+from pprint import pprint
 from PIL import Image, ImageDraw, ImageFilter
 from selenium_base import selenium_base
 from selenium.webdriver.common.action_chains import ActionChains
@@ -36,6 +37,7 @@ class NASAParser():
         #Get to iframe
         selenium = selenium_base.SeleniumBase()
         self.selenium = selenium
+        selenium.driver.set_window_size(1400, 790)
         selenium.open(baseURL)
         time.sleep(self.sleepTime)
         frame = selenium.getElementBy('tag', 'iframe')
